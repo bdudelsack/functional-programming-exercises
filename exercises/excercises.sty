@@ -1,0 +1,70 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[format=plain, labelformat=simple, justification=centering]{caption}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{listingsutf8}
+%\usepackage{cmbright}
+\usepackage{arev}
+%% Seitenränder
+\usepackage[
+   left=2.5cm,                 % linker Rand
+   right=2.5cm,                % rechter Rand
+   top=2.5cm,                  % Rand oben
+   bottom=2.5cm,               % Rand unten
+]{geometry}
+\usepackage{titlesec}
+\usepackage{mathtools}
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{0pt}
+\renewcommand{\baselinestretch}{1.0}
+
+\xdefinecolor{lst_background}{HTML}{FDF6E3}
+\xdefinecolor{lst_comment}{HTML}{93A1A1}
+\xdefinecolor{lst_keyword}{HTML}{268BD2}
+\xdefinecolor{lst_identifier}{HTML}{657B83}
+\xdefinecolor{lst_string}{HTML}{859900}
+
+\lstdefinestyle{haskell}{
+%	columns=fullflexible,
+  showstringspaces=false,
+	backgroundcolor=\color{lst_background},
+	belowcaptionskip=1\baselineskip,
+	breaklines=true,
+	xleftmargin=\parindent,
+	basicstyle=\footnotesize\ttfamily,
+	keywordstyle=\bfseries\color{lst_keyword},
+	commentstyle=\itshape\color{lst_comment},
+	identifierstyle=\color{lst_identifier},
+	stringstyle=\color{lst_string},
+	framexleftmargin=16pt,
+    framextopmargin=6pt,
+    framexbottommargin=6pt,
+    frame=tb,
+    framerule=0pt,
+    aboveskip=\parskip,
+    belowskip=\parskip,
+    literate=
+    	{->}{$\rightarrow{}$}{1}
+    	{<-}{$\leftarrow{}$}{1}
+    	{::}{$\dblcolon{}$}{1}
+    	{==}{$\equiv{}$}{2}
+    	{/=}{$\not{\!\equiv}{}$}{2}
+    	{<=}{$\leq{}$}{2}
+    	{>=}{$\geq{}$}{2}
+}
+
+\lstset{
+	language=Haskell,
+	style=haskell
+}
+
+\author{Boris Dudelsack}
+\date{\today}
+
+\titleformat{\section}[hang]{\sffamily\Large\bfseries}{Aufgabe \thesection: }{0pt}{}
